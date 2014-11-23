@@ -1,0 +1,162 @@
+﻿body {
+    background-color: black;
+    color: orange;
+}
+
+@media screen and (-ms-view-state: fullscreen-landscape) {
+    .programTitle {
+        padding: 20px 60px;
+    }
+
+        .programTitle span {
+            font-size: 28px;
+            font-weight: bolder;
+        }
+
+    .headerProfile {
+        background-color: orange;
+        color: black;
+        min-height: 100px;
+        padding: 10px 40px;
+    }
+
+    .headerProfileDescription {
+        float: left;
+        width: 80%;
+        padding-left: 10px;
+    }
+
+    #playerContainer {
+        width: 68%;
+        height: 65%;
+        float: left;
+        padding-top: 30px;
+    }
+
+    .videoListPanel {
+        width: 30%;
+        height: 65%;
+        float: left;
+    }
+}
+
+@media screen and (-ms-view-state: snapped) {
+    .programTitle {
+        padding: 20px 10px;
+    }
+
+        .programTitle span {
+            font-size: 24px;
+            font-weight: bolder;
+        }
+
+    .headerProfile {
+        background-color: orange;
+        color: black;
+        min-height: 100px;
+        padding: 10px 10px;
+    }
+
+    .headerProfileDescription {
+        float: left;
+        width: 100%;
+        padding-left: 0px;
+    }
+
+    #playerContainer {
+        width: 95%;
+        height: 20%;
+        padding-top: 30px;
+    }
+
+    .videoListPanel {
+        width: 90%;
+        height: 40%;
+    }
+}
+
+@media screen and (-ms-view-state: filled) {
+    .programTitle {
+        padding: 20px 60px;
+    }
+
+        .programTitle span {
+            font-size: 28px;
+            font-weight: bolder;
+        }
+
+    .headerProfile {
+        background-color: orange;
+        color: black;
+        min-height: 100px;
+        padding: 10px 40px;
+    }
+
+    .headerProfileDescription {
+        float: left;
+        width: 80%;
+        padding-left: 10px;
+    }
+
+    #playerContainer {
+        width: 68%;
+        height: 65%;
+        float: left;
+        padding-top: 30px;
+    }
+
+    .videoListPanel {
+        width: 30%;
+        height: 65%;
+        float: left;
+    }
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+}
+
+#playerContainer video, audio {
+    width: 100%;
+    height: 100%;
+}
+
+.win-listview {
+    height: 100%;
+    width: 100%;
+    margin: 20px;
+}
+
+#videoListView .win-listview {
+    height: 500px;
+    width: 500px;
+    border: 2px solid gray;
+}
+
+    #videoListView .win-listview .win-container {
+        margin-top: 10px;
+    }
+
+        #videoListView .win-listview .win-container:hover {
+            color: red;
+        }
+
+.mediumListIconTextItem {
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+    display: -ms-grid;
+    background-color: orange;
+}
+
+    .mediumListIconTextItem img.mediumListIconTextItem-Image {
+        width: 100px;
+        height: 60px;
+        margin: 5px;
+        -ms-grid-column: 1;
+    }
+
+    .mediumListIconTextItem .mediumListIconTextItem-Detail {
+        margin: 5px;
+        -ms-grid-column: 2;
+        color: white;
+    }

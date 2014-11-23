@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>account</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="account.css" rel="stylesheet" />
+    <script src="account.js"></script>
+</head>
+<body>
+    <div id="account" data-win-control="WinJS.UI.SettingsFlyout" data-win-options="{width: 'narrow'}">
+    <div class="SettingsPane">
+        <div class="win-label">
+            <button onclick="WinJS.UI.SettingsFlyout.show()" class="win-backbutton">
+            </button>
+            <span class="SettingsTitle">Account</span>
+        </div>
+        <article class="SettingsContent" style="padding-right: 10px;">
+            <p id="accountPrompt"></p>
+        </article>
+        <div>
+            <!-- define one button to sign in and another to sign out, but show only  -->
+            <!-- one at a time, depending on whether the user is currently signed in or not. -->
+            <button id="signInBtn" onclick="signInCmd(binding.Person)" style="display: none">Sign in</button>
+            <button id="signOutBtn" onclick="signOutCmd(binding.Person)" style="display: none">Sign out</button>
+        </div>
+     </div>
+</div>
+</body>
+</html>

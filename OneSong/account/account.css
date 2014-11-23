@@ -1,0 +1,24 @@
+﻿.account p {
+    margin-left: 120px;
+}
+
+.SettingsPane {
+    margin-top:36px;
+    margin-left:48px;
+}
+
+.SettingsTitle {
+    margin-left:36px;
+}
+
+.SettingsContent {
+     margin-top:24px;
+}
+
+#account {
+    color:white;
+    background-color:black; 
+    background-image:url('/images/logo-in-app.png');
+    background-repeat:no-repeat;
+    background-position:center bottom; 
+}

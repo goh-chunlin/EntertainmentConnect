@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>privacy</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="privacy.css" rel="stylesheet" />
+    <script src="privacy.js"></script>
+</head>
+<body>
+    <div id="privacy" data-win-control="WinJS.UI.SettingsFlyout" data-win-options="{width: 'narrow'}">
+        <div class="SettingsPane">
+            <div class="win-label">
+                <button onclick="WinJS.UI.SettingsFlyout.show()" class="win-backbutton">
+                </button>
+                <span class="SettingsTitle">Privacy</span>
+            </div>
+            <article class="SettingsContent">
+                <!-- Customize this text to fit your application.  -->
+                <h2>Privacy Policy.</h2>
+                Entertainment Connect uses your internet connection to download information from your OneDrive account. This application doesn't:
+                <ul>
+                    <li>Store any personal information;</li>
+                    <li>Share personal information to third party.</li>
+                </ul>
+                <br />
+                <br />
+                <h2>Contact.</h2>
+                If you have any question about this application, please send an email to GCL Project at chunlin@live.com.sg.<br />
+                <br />
+                <h2>Last Updated Date.</h2>
+                17 November 2014
+            </article>
+        </div>
+    </div>
+</body>
+</html>

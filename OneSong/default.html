@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Entertainment Connect</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- The Live SDK -->
+    <script src="///LiveSDKHTML/js/wl.js"></script>    
+    
+    <!-- The app's custom CSS and JS -->
+    <link href="/css/default.css" rel="stylesheet" />
+    
+    <script src="/js/data.js"></script>
+    <script src="/js/default.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/ui.js"></script>
+    <script src="/js/account-ui.js"></script>
+    <script src="/js/skydrive-data.js"></script>
+    <script src="/js/player.js"></script>
+    <script src="/js/appbar.js"></script>
+</head>
+<body>
+    <div style="height: 20px;">
+        <progress id="mainLoadingProgressBar" style="width: 100%; color: orange;"></progress>
+    </div>
+    <div class="programTitle">
+        <span>Entertainment Connect</span>
+    </div>
+    
+    <div class="headerProfile">
+        <div id="bindingDiv">
+            <!-- The elements in this div get their data from the app's data
+            object by using a binding object. -->
+            <div class="content">
+                <div style="float: left; min-width: 90px;">
+                    <img onerror="this.src='/images/SignedOutImage.png';" style="width: 90px; height: 90px;" id="appImage" data-win-bind="src: image.url; title: image.caption" />
+                </div>
+                <div class="headerProfileDescription">
+                    <h1>
+                        <!-- The app's title. This is configured by the program. -->
+                        <span id="titleText" data-win-bind="innerText: person.titleText">person.titleText</span>
+                    </h1>
+                    <span id="appImageCaption" data-win-bind="innerText: image.caption">image.caption</span>
+                </div>
+                <div style="clear: both;"></div>           
+            </div>
+        </div>
+    </div>
+    
+    <div id="infoArea"></div>
+
+    <!-- Template of the list items to show available music/videos -->
+    <div id="mediumListIconTextTemplate" data-win-control="WinJS.Binding.Template" style="display: none">
+        <div class="mediumListIconTextItem">
+            <img onerror="this.src='/images/default-video-preview.png';" class="mediumListIconTextItem-Image" data-win-bind="src : picture"  />
+            <div class="mediumListIconTextItem-Detail">
+                <h4 data-win-bind="innerText: name"></h4>
+                <h6 data-win-bind="innerText: duration"></h6>
+            </div>
+        </div>
+    </div>
+
+    <div style="height: 100%; padding-left: 10px;">
+        <div id="playerContainer">
+        
+        </div>
+        <div class="videoListPanel">
+            <div id="videoListView" data-win-control="WinJS.UI.ListView" data-win-options="{ itemDataSource : SkyDriveVideos.itemList.dataSource, itemTemplate: select('#mediumListIconTextTemplate'), layout: {type: WinJS.UI.ListLayout}, selectionMode: 'single', tapBehavior: 'toggleSelect' }">>  
+            </div>
+            <span id="msgVideoLoop"></span>
+        </div>
+        <div style="clear: both;">
+
+        </div>
+    </div>
+
+    <div id="appBar" data-win-control="WinJS.UI.AppBar" data-win-options="">
+        <button 
+            data-win-control="WinJS.UI.AppBarCommand" 
+            data-win-options="{
+            id:'cmdLoopAll', 
+            label:'Loop', 
+            icon:'rotate',
+            section:'global',
+            tooltip:'Loop all videos and audios'}">
+        </button>
+    </div>
+</body>
+</html>
